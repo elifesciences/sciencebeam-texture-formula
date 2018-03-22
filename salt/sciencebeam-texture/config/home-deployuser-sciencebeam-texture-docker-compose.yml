@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+    texture:
+        image: elifesciences/sciencebeam_texture:${IMAGE_TAG}
+        command: npm start
+        volumes:
+            - data:/home/node/texture/data
+        ports:
+            - "4000:4000"
+    sciencebeam:
+        image: elifesciences/sciencebeam:${SCIENCEBEAM_TAG}
+        command: ./server.sh \
+            --host=0.0.0.0 --port=8075 \
+            --grobid-url http://grobid:8070/api \
+            --grobid-action /processHeaderDocument
+        ports:
+            - "8075:8075"
+        depends_on:
+            - grobid
+    grobid:
+        image: lfoppiano/grobid:${GROBID_TAG}
+        ports:
+            - "8070:8070"
+
+volumes:
+    data:
