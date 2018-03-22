@@ -1,4 +1,6 @@
 base:
     '*':
         - elife
+        - elife.docker
+        - elife.nginx
         - sciencebeam-texture
