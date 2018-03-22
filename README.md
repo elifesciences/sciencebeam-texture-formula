@@ -1,7 +1,14 @@
 # `sciencebeam-texture` formula
 
-This repository contains instructions for installing and configuring the `sciencebeam-texture`
-project.
+This repository contains instructions for installing and configuring the `sciencebeam-texture` project.
+
+It exposes:
+
+- `/` (Texture)
+- `/sciencebeam/api`
+- `/grobid/`
+
+on port 443 and HTTPS (falls back to 80 and HTTP on Vagrant instances).
 
 This repository should be structured as any Saltstack formula should, but it 
 should also conform to the structure required by the [builder](https://github.com/elifesciences/builder) 
