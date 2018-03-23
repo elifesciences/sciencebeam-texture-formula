@@ -5,7 +5,7 @@ This repository contains instructions for installing and configuring the `scienc
 It exposes:
 
 - `/` (Texture)
-- `/sciencebeam/api`
+- `/api`
 - `/grobid/`
 
 on port 443 and HTTPS (falls back to 80 and HTTP on Vagrant instances).
