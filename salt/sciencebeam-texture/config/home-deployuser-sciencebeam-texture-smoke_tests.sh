@@ -10,7 +10,7 @@ smoke_url_ok localhost:8070/
 echo "Texture nginx"
 smoke_url_ok localhost/
 echo "Sciencebeam nginx"
-smoke_url_ok localhost/sciencebeam/api/
+smoke_url_ok localhost/api/
 echo "GROBID nginx"
 smoke_url_ok localhost/grobid/
 
