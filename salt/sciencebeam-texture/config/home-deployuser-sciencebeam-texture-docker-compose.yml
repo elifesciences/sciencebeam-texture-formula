@@ -18,6 +18,8 @@ services:
             - grobid
     grobid:
         image: lfoppiano/grobid:${GROBID_TAG}
+        environment:
+            - JAVA_OPTS=-Xmx1g
         ports:
             - "8070:8070"
 
