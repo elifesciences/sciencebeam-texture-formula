@@ -3,7 +3,7 @@ version: '3'
 services:
     texture:
         image: elifesciences/sciencebeam_texture:${IMAGE_TAG}
-        command: npm start
+        command: npm run start:prod
         volumes:
             - data:/home/node/texture/data
         ports:
