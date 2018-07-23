@@ -6,6 +6,7 @@ services:
         command: npm run start:prod
         ports:
             - "4000:4000"
+        restart: always
         depends_on:
             - sciencebeam
     sciencebeam:
@@ -18,6 +19,7 @@ services:
         networks:
             - default
             - grobid
+        restart: always
         depends_on:
             - grobid
     grobid:
@@ -28,6 +30,12 @@ services:
             - "8070:8070"
         networks:
             - grobid
+        healthcheck:
+            test: ["CMD", "bash", "-c", "echo > /dev/tcp/localhost/8070"]
+            interval: 10s
+            timeout: 10s
+            retries: 5
+        restart: always
 
 networks:
     default:
