@@ -30,6 +30,7 @@ services:
         image: ${SCIENCEBEAM_AUTOCUT_REPO}:${SCIENCEBEAM_AUTOCUT_TAG}
         ports:
             - "8079:8080"
+        restart: always
     grobid:
         image: lfoppiano/grobid:${GROBID_TAG}
         environment:
