@@ -6,6 +6,8 @@ sciencebeam-texture-docker-compose-folder:
         - recurse:
             - user
             - group
+        - require:
+            - mount-external-volume
 
 sciencebeam-texture-docker-compose-.env:
     file.managed:
