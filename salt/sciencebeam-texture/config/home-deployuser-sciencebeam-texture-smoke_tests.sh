@@ -1,8 +1,9 @@
 #!/bin/bash
+set -e
 . /opt/smoke.sh/smoke.sh
 
 echo "Healthchecks"
-docker-wait-healthy sciencebeamtexture_texture_1
+docker-wait-healthy sciencebeam-texture_texture_1
 
 echo "Texture container"
 smoke_url_ok localhost:4000/
