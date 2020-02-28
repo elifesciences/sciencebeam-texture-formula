@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e
+#set -e # don't do this, this script handles exit code itself
+
 . /opt/smoke.sh/smoke.sh
 
 echo "Healthchecks"
