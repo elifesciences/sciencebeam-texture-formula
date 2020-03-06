@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -e # don't do this, this script handles exit code itself
+#set -e # don't do this, this script handles exit code itself in `smoke_report`
 
 . /opt/smoke.sh/smoke.sh
 
