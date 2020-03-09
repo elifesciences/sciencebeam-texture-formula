@@ -15,6 +15,9 @@ sciencebeam-texture-docker-compose-.env:
         - template: jinja
         - require:
             - sciencebeam-texture-docker-compose-folder
+            # rendering this template calls Docker commands that may expect /ext to exist. 
+            # if enabled, ensure /ext is present before rendering
+            - mount-external-volume
 
 sciencebeam-texture-docker-compose-yml:
     file.managed:
