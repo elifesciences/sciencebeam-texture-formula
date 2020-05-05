@@ -1,1 +1,1 @@
-elifeFormula('sciencebeam-texture', '/home/elife/sciencebeam-texture', null, ['s1804'])
+elifeFormula('sciencebeam-texture', '/home/elife/sciencebeam-texture', null, ['snsalt'])
