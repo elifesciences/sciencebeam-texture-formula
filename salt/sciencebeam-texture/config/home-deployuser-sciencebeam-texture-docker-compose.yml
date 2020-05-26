@@ -55,18 +55,6 @@ services:
             - "8076:8076"
         networks:
             - grobid
-        depends_on:
-            - grobid_biorxiv
-        restart: always
-    grobid_biorxiv:
-        image: ${SCIENCEBEAM_GROBID_BIORXIV_REPO}:${SCIENCEBEAM_GROBID_BIORXIV_TAG}
-        environment:
-            - JAVA_OPTS=-Xmx1g
-            - GROBID__HEADER__USE_LABELED_ABSTRACT=false
-        ports:
-            - "8072:8070"
-        networks:
-            - grobid
         restart: always
 
 networks:
