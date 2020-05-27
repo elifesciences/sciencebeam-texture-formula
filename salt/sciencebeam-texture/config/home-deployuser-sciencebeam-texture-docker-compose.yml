@@ -54,6 +54,7 @@ services:
         ports:
             - "8076:8076"
         networks:
+            - default
             - grobid
         depends_on:
             - grobid_biorxiv
